@@ -2,11 +2,11 @@ Summary:	Master Boot Record for IBM-PC compatible computers
 Name:		mbr
 Version:	1.1.11
 Release:	1
+License:	GPL
 Group:		Base
-URL:		http://www.chiark.greenend.org.uk/~neilt/mbr/
 Source0:	http://www.chiark.greenend.org.uk/~neilt/mbr/%{name}-%{version}.tar.gz
 # Source0-md5:	4e406ded185f94c2d2bf5fc793ac1842
-License:	GPL
+URL:		http://www.chiark.greenend.org.uk/~neilt/mbr/
 BuildRequires:	bin86
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
