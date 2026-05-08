@@ -1,0 +1,11 @@
+--- mbr-1.1.11/install-mbr.c.orig	2010-11-24 16:23:44.000000000 +0100
++++ mbr-1.1.11/install-mbr.c	2026-05-08 00:00:00.000000000 +0200
+@@ -640,7 +640,7 @@
+       printf(" F");
+     if(cp->enabled & CPE_A)
+       printf(" A");
+-      printf("\n");
++    printf("\n");
+   }
+   if(cp->flags & CPFLAG_INTERRUPT)
+   {
