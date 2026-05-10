@@ -1,7 +1,7 @@
 Summary:	Master Boot Record for IBM-PC compatible computers
 Name:		mbr
 Version:	1.1.11
-Release:	2
+Release:	3
 License:	GPL
 Group:		Base
 Source0:	http://www.chiark.greenend.org.uk/~neilt/mbr/%{name}-%{version}.tar.gz
