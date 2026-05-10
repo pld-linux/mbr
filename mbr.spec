@@ -8,6 +8,7 @@ Source0:	http://www.chiark.greenend.org.uk/~neilt/mbr/%{name}-%{version}.tar.gz
 # Source0-md5:	4e406ded185f94c2d2bf5fc793ac1842
 URL:		http://www.chiark.greenend.org.uk/~neilt/mbr/
 Patch0:		%{name}-misleading-indentation.patch
+Patch1:		disable-bounds-checks.patch
 BuildRequires:	bin86
 ExclusiveArch:	%{ix86} %{x8664} x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -18,6 +19,7 @@ Master Boot Record for IBM-PC compatible computers.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %configure

@@ -1,0 +1,13 @@
+--- mbr-1.1.11/harness/bios.c~	2026-05-10 12:40:11.000000000 +0200
++++ mbr-1.1.11/harness/bios.c	2026-05-10 12:40:41.183350762 +0200
+@@ -339,7 +339,10 @@
+ void set_shift_state (unsigned long state)
+ {
+   unsigned char *flag = (void*)0x417;
++#pragma GCC diagnostic ignored "-Warray-bounds="
++#pragma GCC diagnostic ignored "-Wstringop-overflow="
+   *flag = state;
++#pragma GCC diagnostic pop
+ }
+ 
+ /*  */
