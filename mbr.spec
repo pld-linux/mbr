@@ -9,7 +9,7 @@ Source0:	http://www.chiark.greenend.org.uk/~neilt/mbr/%{name}-%{version}.tar.gz
 URL:		http://www.chiark.greenend.org.uk/~neilt/mbr/
 Patch0:		%{name}-misleading-indentation.patch
 BuildRequires:	bin86
-ExclusiveArch:	%{ix86} %{x8664}
+ExclusiveArch:	%{ix86} %{x8664} x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
