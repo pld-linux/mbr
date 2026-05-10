@@ -1,0 +1,11 @@
+--- mbr-1.1.11/configure.in~	2008-07-19 18:14:37.000000000 +0200
++++ mbr-1.1.11/configure.in	2026-05-10 12:47:44.906684688 +0200
+@@ -9,7 +9,7 @@
+ 
+ dnl I'm not sure if the number of brackets needed for this is
+ dnl well-defined...
+-AM_CONDITIONAL(HAVE_VM86, [[uname -m | grep -q 'i[0-9]86']])
++AM_CONDITIONAL(HAVE_VM86, [[/bin/false]])
+ 
+ AC_CONFIG_FILES([wraptest])
+ 

@@ -1,7 +1,7 @@
 Summary:	Master Boot Record for IBM-PC compatible computers
 Name:		mbr
 Version:	1.1.11
-Release:	3
+Release:	4
 License:	GPL
 Group:		Base
 Source0:	http://www.chiark.greenend.org.uk/~neilt/mbr/%{name}-%{version}.tar.gz
@@ -9,6 +9,7 @@ Source0:	http://www.chiark.greenend.org.uk/~neilt/mbr/%{name}-%{version}.tar.gz
 URL:		http://www.chiark.greenend.org.uk/~neilt/mbr/
 Patch0:		%{name}-misleading-indentation.patch
 Patch1:		disable-bounds-checks.patch
+Patch2:		no-harness.patch
 BuildRequires:	bin86
 ExclusiveArch:	%{ix86} %{x8664} x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,8 +21,10 @@ Master Boot Record for IBM-PC compatible computers.
 %setup -q
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 
 %build
+%{__autoconf}
 %configure
 %{__make}
 
